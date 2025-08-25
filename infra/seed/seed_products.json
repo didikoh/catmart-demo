@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Premium Cat Food - Salmon",
+    "price": 29.99,
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400&h=400&fit=crop",
+    "description": "High-quality salmon-based cat food for adult cats",
+    "stock_quantity": 50
+  },
+  {
+    "title": "Interactive Cat Toy Mouse",
+    "price": 12.49,
+    "category": "toys",
+    "image": "https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=400&h=400&fit=crop",
+    "description": "Electronic mouse toy that moves and makes sounds",
+    "stock_quantity": 25
+  },
+  {
+    "title": "Luxury Cat Bed",
+    "price": 45.00,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=400&fit=crop",
+    "description": "Comfortable orthopedic bed for cats of all sizes",
+    "stock_quantity": 15
+  },
+  {
+    "title": "Cat Scratching Post",
+    "price": 34.95,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=400&h=400&fit=crop",
+    "description": "Tall scratching post with sisal rope and dangling toys",
+    "stock_quantity": 20
+  },
+  {
+    "title": "Organic Cat Treats",
+    "price": 8.99,
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=400&h=400&fit=crop",
+    "description": "All-natural organic treats with chicken and sweet potato",
+    "stock_quantity": 100
+  },
+  {
+    "title": "Cat Carrier Backpack",
+    "price": 67.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=400&fit=crop",
+    "description": "Comfortable travel backpack carrier with mesh windows",
+    "stock_quantity": 12
+  },
+  {
+    "title": "Feather Wand Cat Toy",
+    "price": 15.99,
+    "category": "toys",
+    "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&h=400&fit=crop",
+    "description": "Interactive feather wand to stimulate hunting instincts",
+    "stock_quantity": 30
+  },
+  {
+    "title": "Automatic Cat Feeder",
+    "price": 89.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1425421669292-0c3da3b8f529?w=400&h=400&fit=crop",
+    "description": "Smart feeder with timer and portion control",
+    "stock_quantity": 8
+  },
+  {
+    "title": "Kitten Formula Milk",
+    "price": 18.50,
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=400&h=400&fit=crop",
+    "description": "Special formula milk for kittens under 8 weeks",
+    "stock_quantity": 35
+  },
+  {
+    "title": "Cat Puzzle Toy",
+    "price": 22.95,
+    "category": "toys",
+    "image": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=400&h=400&fit=crop",
+    "description": "Interactive puzzle toy to challenge your cat's mind",
+    "stock_quantity": 18
+  },
+  {
+    "title": "Cat Water Fountain",
+    "price": 49.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=400&h=400&fit=crop",
+    "description": "Circulating water fountain to encourage hydration",
+    "stock_quantity": 22
+  },
+  {
+    "title": "Catnip Spray",
+    "price": 6.49,
+    "category": "toys",
+    "image": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=400&h=400&fit=crop",
+    "description": "Pure catnip spray to attract and excite cats",
+    "stock_quantity": 75
+  }
+]

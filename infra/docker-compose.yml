@@ -1,0 +1,62 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  go-api:
+    build: ../backend/go-api
+    ports:
+      - "${GO_API_PORT}:${GO_API_PORT}"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - PORT=${GO_API_PORT}
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./seed:/app/seed
+
+  py-ml:
+    build: ../backend/py-ml
+    ports:
+      - "${PY_API_PORT}:${PY_API_PORT}"
+    environment:
+      - PORT=${PY_API_PORT}
+      - GO_API_URL=http://go-api:${GO_API_PORT}
+    depends_on:
+      - go-api
+    volumes:
+      - ml_reports:/tmp
+
+  web:
+    build: ../frontend/catmart-web
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    environment:
+      - VITE_GO_API_URL=http://localhost:${GO_API_PORT}
+      - VITE_PY_API_URL=http://localhost:${PY_API_PORT}
+    depends_on:
+      - go-api
+      - py-ml
+
+volumes:
+  postgres_data:
+  ml_reports:
